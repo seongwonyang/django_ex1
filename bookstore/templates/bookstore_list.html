@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>BOOKSTORE</title>
+</head>
+<body>
+<div>
+    <h1>Bookstore List</h1>
+    <ul>
+        {% for book in books %}
+            <li><a href="{% url 'detail' book.code %}"> 제목 : {{book.name}} </a></li>
+            <p> 저자 : {{book.author}} </p>
+        {% endfor %}
+    </ul>
+</div>
+</body>
+</html>
